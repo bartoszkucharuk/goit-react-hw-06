@@ -1,0 +1,18 @@
+.searchBoxLabel {
+    display: flex;
+    flex-direction: column;
+    width: 205px;
+    margin-bottom: 20px;
+}
+
+.searchBoxInput {
+    width: 200px;
+    margin: 0px;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+.searchBoxInput:hover,
+.searchBoxInput:focus {
+    border: 1px solid blue;
+}
