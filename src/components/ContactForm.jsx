@@ -46,9 +46,3 @@ export default function ContactForm({ addContact }) {
     </Formik>
   )
 };
-
-// ____________________________________________________________________
-              // <form onSubmit={handleSubmit}>
-              //   <input type="text" name="name" />
-              //   <button type="submit">Add contact</button>
-              // </form>
