@@ -19,20 +19,15 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-//function export to main.jsx (store, persistor)
-const persistedStoreConfig = () => {
-    const store = configureStore({
-        reducer: persistedReducer,
-        middleware: (getDefaultMiddleware) =>
-            getDefaultMiddleware({
-                serializableCheck: {
-                    ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
-                },
-            }),
-    });
-
-    const persistor = persistStore(store);
-    return { store, persistor };
-}
-
-export default persistedStoreConfig;
+//prepare config for persisted store to export to main.jsx (store, persistor)
+const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+            }
+        })
+});
+export const persistor = persistStore(store);
+export default store;
