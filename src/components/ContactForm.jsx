@@ -3,10 +3,12 @@ import { useId } from "react";
 import { v4 as uuidv4 } from "uuid";
 import * as Yup from "yup";
 import styles from "./ContactForm.module.css"
+import { useDispatch } from 'react-redux';
 
 export default function ContactForm({ addContact }) {
   const nameFieldId = useId();
   const numberFieldId = useId();
+  const dispatch = useDispatch();
 
   const initialValues = {
     name: "",
