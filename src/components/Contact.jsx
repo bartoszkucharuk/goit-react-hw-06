@@ -22,7 +22,11 @@ const Contact = ({ name, number, id }) => {
 
       <button
         className={styles.contactDeleteBtn}
-        onClick={() => dispatch(deleteContact(id))}>
+        onClick={() => {
+          if (window.confirm("Are you sure you want to delete this contact from your list?")) {
+            dispatch(deleteContact(id));
+          }
+        }}>
         Delete
       </button>
     </div>
