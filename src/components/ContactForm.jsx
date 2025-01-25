@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { contactsSelector } from '../redux/selectors';
 import { addContact } from '../redux/contactSlice';
 
-export default function ContactForm() {
+const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
   const dispatch = useDispatch();
@@ -77,3 +77,5 @@ const handleSubmit = (values, actions) => {
     </Formik>
   )
 };
+
+export default ContactForm;
