@@ -25,6 +25,7 @@
 }
 
 .formInput {
+    color: black;
     width: 360px;
     height: 30px;
     margin: 0px;
@@ -57,5 +58,6 @@
 .addContactBtn:focus {
     border: 1px solid blue;
     background-color: lightblue;
+    color: black;
     border-radius: 25px;
 }
