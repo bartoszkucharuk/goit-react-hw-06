@@ -15,7 +15,7 @@ const SearchBox = () => {
         <label className={styles.searchBoxLabel}>
           Find contacts by name
           <input type="text"
-            onChange={onChangeSearch} className={styles.searchBoxInput} />
+            onChange={onChangeSearch} className={styles.searchBoxInput} placeholder="enter search name here..." />
         </label>
       </div>
     </form>

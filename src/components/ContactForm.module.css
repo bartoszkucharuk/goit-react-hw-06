@@ -4,10 +4,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 4px;
-    width: 300px;
+    width: 400px;
     height: 100%;
+    margin-bottom: 20px;
 }
 
 .formLabel {
@@ -15,6 +16,7 @@
     flex-direction: column;
     max-width: 100%;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .requiredError {
@@ -23,12 +25,13 @@
 }
 
 .formInput {
-    width: 260px;
-    height: 20px;
+    width: 360px;
+    height: 30px;
     margin: 0px;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 3px;
-    background-color:white;;
+    background-color:white;
+    box-sizing: border-box;
 }
 
 .formInput::placeholder {
@@ -38,19 +41,21 @@
 
 .formInput:focus,
 .formInput:hover {
-    border: 1px solid blue;
+    border: 1px solid rgb(211, 83, 44);
 }
 
 .addContactBtn {
-    margin: 10px auto;
+    margin: 40px auto;
+    width: 360px;
     border: 1px solid black;
     border-radius: 2px;
     height: 25px;
+    transition: 0.3s;
 }
 
 .addContactBtn:hover,
 .addContactBtn:focus {
     border: 1px solid blue;
-    background-color: lightgrey;
+    background-color: lightblue;
     border-radius: 25px;
 }
