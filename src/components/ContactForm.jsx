@@ -22,12 +22,12 @@ const validationSchema = Yup.object().shape({
     .min(3, "name's too short")
     .max(50, "name's too long")
     .matches(/^[A-Za-z\s\-'.]+$/, "name must be valid!")
-    .required("name field is required"),
+    .required(" (required)"),
   number: Yup.string()
     .min(7, "number's too short")
     .max(12, "number's too long")
     .matches(/^[0-9-]+$/, "phone number must be valid!")
-    .required("number field is required")
+    .required(" (required)")
   });
   
 //use contacts selector to make iterating operations "state.contacts.items"
@@ -63,14 +63,19 @@ const handleSubmit = (values, actions) => {
       
       <Form className={styles.form}>
         <div className={styles.formLabel}>
-          <label htmlFor={nameFieldId}>Name</label>
-          <Field type="text" name="name" id={nameFieldId} className={styles.formInput} placeholder="new name"></Field>
-          <ErrorMessage className={styles.errorMessage} name="name" as="span" />
+          <label htmlFor={nameFieldId}>Name   
+          <ErrorMessage name="name">
+            {(message) => <span className={styles.requiredError}>{message}</span>}
+          </ErrorMessage>          </label>
+          <Field type="text" name="name" id={nameFieldId} className={styles.formInput} placeholder="enter new name here"></Field>
+          
         </div>
         <div className={styles.formLabel}>
-          <label htmlFor={numberFieldId}>Number</label>
-          <Field type="text" name="number" id={numberFieldId} className={styles.formInput} placeholder="phone number"></Field>
-          <ErrorMessage className={styles.errorMessage} name="number" as="span" />
+          <label htmlFor={numberFieldId}>Number
+            <ErrorMessage name="number">
+            {(message) => <span className={styles.requiredError}>{message}</span>}
+          </ErrorMessage>          </label>
+          <Field type="text" name="number" id={numberFieldId} className={styles.formInput} placeholder="enter new phone number here"></Field>
         </div>
         <button type="submit" className={styles.addContactBtn}>Add contact</button>
       </Form>

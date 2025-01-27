@@ -6,7 +6,7 @@
     margin-bottom: 20px;
     border: 1px solid black;
     border-radius: 4px;
-    width: 200px;
+    width: 300px;
     height: 100%;
 }
 
@@ -17,11 +17,23 @@
     margin-top: 5px;
 }
 
+.required {
+    margin-left: 10px;
+    color: red;
+}
+
 .formInput {
-    width: 180px;
+    width: 260px;
+    height: 20px;
     margin: 0px;
-    border: 1px solid grey;
-    border-radius: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color:white;;
+}
+
+.formInput::placeholder {
+    padding: 4px;
+    color: rgb(153, 142, 142);
 }
 
 .formInput:focus,

@@ -15,7 +15,7 @@ const Contact = ({ name, number, id }) => {
         </p>
         
         <p className={styles.contactNumber}>
-          <FaPhone size="10" />
+          <FaPhone size="10"/>
           {number}
         </p>
       </div>
