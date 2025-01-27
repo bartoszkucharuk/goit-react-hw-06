@@ -10,12 +10,12 @@ const Contact = ({ name, number, id }) => {
     <div className={styles.singleContact}>
       <div className={styles.contactData}>
         <p className={styles.contactName}>
-          <FaUser size="10" />
+          <FaUser size="10" className={styles.userIcon} />
           {name}
         </p>
         
         <p className={styles.contactNumber}>
-          <FaPhone size="10"/>
+          <FaPhone size="10" className={styles.phoneIcon} />
           {number}
         </p>
       </div>

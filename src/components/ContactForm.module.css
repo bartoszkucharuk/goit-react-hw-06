@@ -17,8 +17,8 @@
     margin-top: 5px;
 }
 
-.required {
-    margin-left: 10px;
+.requiredError {
+    margin-left: 4px;
     color: red;
 }
 
